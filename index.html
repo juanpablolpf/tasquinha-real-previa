@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tasquinha Real | Meireles, Fortaleza</title>
+<meta name="description" content="Tasquinha Real: gastrobar português com bacalhau à lagareiro, bolinhos de bacalhau, polvo e pastel de nata. Rua Ana Bilhar, 1496, Meireles, Fortaleza.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --ground: #F6F8FC; --paper: #FFFFFF; --ink: #14233F; --muted: #56627A; --line: #D6DEEC;
+    --azul: #1E4F99; --azul-ink: #FFFFFF; --mostarda: #E2A63A;
+    --display: "Fraunces", "Georgia", serif; --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { background: var(--ground); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; }
+  a { color: inherit; } img { max-width: 100%; display: block; }
+  :focus-visible { outline: 3px solid var(--mostarda); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 800; line-height: 1.05; text-wrap: balance; }
+  .wrap { max-width: 1160px; margin-inline: auto; padding-inline: 24px; }
+  .preview-bar { background: var(--azul); color: var(--azul-ink); text-align: center; font-size: .88rem; padding: 8px 16px; line-height: 1.4; }
+  /* faixa de azulejo feita em CSS */
+  .tiles { height: 18px; background-color: var(--paper); background-image: radial-gradient(circle at 50% 50%, var(--azul) 3px, transparent 4px), linear-gradient(45deg, transparent 42%, var(--azul) 43%, var(--azul) 57%, transparent 58%), linear-gradient(-45deg, transparent 42%, var(--azul) 43%, var(--azul) 57%, transparent 58%); background-size: 18px 18px; opacity: .85; }
+  .top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--ground) 94%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+  .logo { font-family: var(--display); font-weight: 800; font-size: 1.5rem; text-decoration: none; color: var(--azul); }
+  .top nav { display: flex; align-items: center; gap: 24px; }
+  .top nav a { text-decoration: none; color: var(--muted); font-size: .98rem; font-weight: 600; }
+  .top nav a:hover { color: var(--ink); }
+  .btn { display: inline-block; text-decoration: none; font-weight: 600; font-size: 1rem; padding: 12px 22px; border-radius: 6px; background: var(--azul); color: var(--azul-ink); border: 2px solid var(--azul); }
+  .btn:hover { filter: brightness(1.1); }
+  .btn-line { background: transparent; color: var(--azul); }
+  .btn-line:hover { background: var(--azul); color: var(--azul-ink); filter: none; }
+  .top nav .btn { color: var(--azul-ink); padding: 8px 16px; font-size: .95rem; }
+  .menu-toggle { display: none; background: none; border: 2px solid var(--azul); color: var(--azul); border-radius: 6px; padding: 6px 14px; font: inherit; font-weight: 600; font-size: .95rem; cursor: pointer; }
+  @media (max-width: 760px) {
+    .menu-toggle { display: inline-block; }
+    .top nav { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--ground); border-bottom: 1px solid var(--line); padding: 8px 24px 20px; }
+    .top nav a { padding-block: 12px; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+    .top nav .btn { margin-top: 16px; text-align: center; border-bottom: 2px solid var(--azul); padding: 12px; }
+  }
+  .hero { display: grid; grid-template-columns: 1fr; gap: 40px; padding-block: 56px 80px; }
+  @media (min-width: 940px) { .hero { grid-template-columns: 6fr 5fr; align-items: center; padding-block: 80px 104px; } }
+  .flag { color: var(--azul); font-weight: 600; margin-bottom: 16px; }
+  .hero h1 { font-size: clamp(2.6rem, 6.6vw, 5rem); margin-bottom: 22px; }
+  .hero h1 em { font-style: italic; font-weight: 600; color: var(--azul); }
+  .hero .lede { color: var(--muted); font-size: 1.18rem; max-width: 30em; margin-bottom: 30px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .tile-frame { padding: 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 4px; box-shadow: 8px 8px 0 var(--azul); }
+  .tile-frame img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+  section.block { padding-block: 84px; border-top: 1px solid var(--line); }
+  .block h2.title { font-size: clamp(2.2rem, 4.6vw, 3.3rem); margin-bottom: 14px; }
+  .block .intro { color: var(--muted); max-width: 38em; margin-bottom: 36px; }
+  .classics { list-style: none; display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 760px) { .classics { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1040px) { .classics { grid-template-columns: repeat(3, 1fr); } }
+  .classics li { background: var(--paper); border: 1px solid var(--line); border-top: 4px solid var(--azul); border-radius: 4px; padding: 22px; }
+  .classics h3 { font-size: 1.4rem; margin-bottom: 6px; }
+  .classics p { color: var(--muted); }
+  .photos { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 32px; }
+  @media (min-width: 820px) { .photos { grid-template-columns: repeat(4, 1fr); } }
+  .photos img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 4px; }
+  .credit { margin-top: 12px; font-size: .85rem; color: var(--muted); }
+  .hh { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; background: var(--azul); color: var(--azul-ink); border-radius: 8px; padding: 32px; }
+  @media (min-width: 820px) { .hh { grid-template-columns: 1fr 1fr; } }
+  .hh h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 10px; }
+  .hh p { color: #D8E3F5; }
+  .hh ul { list-style: none; display: grid; gap: 8px; }
+  .hh li { border-bottom: 1px solid rgba(255,255,255,.2); padding-bottom: 8px; }
+  .visit { display: grid; grid-template-columns: 1fr; gap: 40px; }
+  @media (min-width: 900px) { .visit { grid-template-columns: 1fr 1fr; gap: 64px; } }
+  .address { font-family: var(--display); font-size: clamp(1.7rem, 3.4vw, 2.4rem); line-height: 1.15; margin-bottom: 14px; }
+  .phone { color: var(--muted); margin-bottom: 22px; }
+  .phone a { color: var(--azul); font-weight: 600; text-underline-offset: 4px; }
+  .when { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 26px; }
+  .when h3 { font-size: 1.6rem; margin-bottom: 12px; color: var(--azul); }
+  .when dl { display: grid; grid-template-columns: auto 1fr; gap: 8px 20px; }
+  .when dt { color: var(--muted); }
+  .when dd { font-weight: 600; }
+  .when p { color: var(--muted); margin-top: 14px; font-size: .95rem; }
+  .map { margin-top: 44px; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); }
+  .map iframe { display: block; width: 100%; height: clamp(280px, 45vw, 420px); border: 0; }
+  footer { border-top: 1px solid var(--line); padding-block: 28px 40px; color: var(--muted); font-size: .92rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  @media (max-width: 480px) { .wrap { padding-inline: 16px; } .hh { padding: 24px; } .actions .btn { flex: 1 1 auto; text-align: center; } }
+</style>
+</head>
+<body>
+  <div class="preview-bar">Proposta de site para a Tasquinha Real, criada por Juan Filho. Aguardando aprovação.</div>
+  <header class="top">
+    <div class="wrap">
+      <a class="logo" href="#inicio">Tasquinha Real</a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" aria-label="Seções">
+        <a href="#classicos">Clássicos</a>
+        <a href="#happy">Happy hour</a>
+        <a href="#visite">Visite</a>
+        <a class="btn" href="https://usetag.me/tasquinhareal" target="_blank" rel="noopener">Reservar</a>
+      </nav>
+    </div>
+  </header>
+  <div class="tiles" aria-hidden="true"></div>
+
+  <main id="inicio">
+    <div class="wrap hero">
+      <div>
+        <p class="flag">Gastrobar português no Meireles</p>
+        <h1>Bacalhau, petiscos e vinho verde, <em>à moda de Portugal.</em></h1>
+        <p class="lede">Pratos tradicionais portugueses, ambiente descontraído e drinks autorais, do almoço de fim de semana ao happy hour.</p>
+        <div class="actions">
+          <a class="btn" href="https://usetag.me/tasquinhareal" target="_blank" rel="noopener">Reservar uma mesa</a>
+          <a class="btn btn-line" href="https://livemenu.app/menu/695ff3a5d3c751e102d37dd3" target="_blank" rel="noopener">Ver o cardápio</a>
+        </div>
+      </div>
+      <div class="tile-frame"><img src="fotos/fachada.jpg" alt="Fachada azul da Tasquinha Real com mesas na calçada" width="360" height="640"></div>
+    </div>
+
+    <section id="classicos" class="block">
+      <div class="wrap">
+        <h2 class="title">Os clássicos da casa</h2>
+        <p class="intro">Receitas tradicionais portuguesas que não saem do cardápio.</p>
+        <ul class="classics">
+          <li><h3>Bacalhau à lagareiro</h3><p>O clássico português, assado no azeite.</p></li>
+          <li><h3>Polvo à madeirense</h3><p>Polvo preparado à moda da Ilha da Madeira.</p></li>
+          <li><h3>Arroz de pato</h3><p>Um dos pratos mais tradicionais de Portugal.</p></li>
+          <li><h3>Bolinhos de bacalhau</h3><p>Mini bolinhos de bacalhau com batata, para petiscar.</p></li>
+          <li><h3>Pão português</h3><p>Rústico, de casca crocante, com manteiga de ervas. Bom para molhar nos caldos.</p></li>
+          <li><h3>Pastel de nata</h3><p>O doce português mais famoso, para fechar.</p></li>
+        </ul>
+        <ul class="photos">
+          <li><img src="fotos/bacalhau.jpg" alt="Prato com bacalhau desfiado e batata palha" width="360" height="640" loading="lazy"></li>
+          <li><img src="fotos/caldeirada.jpg" alt="Caldeirada de frutos do mar em panela" width="360" height="640" loading="lazy"></li>
+          <li><img src="fotos/polvo.jpg" alt="Prato de frutos do mar com molho" width="360" height="640" loading="lazy"></li>
+          <li><img src="fotos/forno.jpg" alt="Travessa de forno com peixe e legumes" width="480" height="640" loading="lazy"></li>
+        </ul>
+        <p class="credit">Fotos: <a href="https://www.instagram.com/tasquinharealoficial/" target="_blank" rel="noopener">@tasquinharealoficial</a></p>
+      </div>
+    </section>
+
+    <section id="happy" class="block">
+      <div class="wrap">
+        <div class="hh">
+          <div>
+            <h2>Happy hour</h2>
+            <p>Chopp, drinks e petiscos em horário especial durante a semana. Confira os dias e horários com a casa.</p>
+          </div>
+          <ul>
+            <li>Espetos de camarão, sirigado, frango e coração</li>
+            <li>Vinhos portugueses, como o vinho verde</li>
+            <li>Azedinho, gengibrada e gin tônica</li>
+            <li>Pastelzinhos e batata Ramiro</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="visite" class="block">
+      <div class="wrap visit">
+        <div>
+          <h2 class="title">Visite</h2>
+          <p class="address">Rua Ana Bilhar, 1496<br>Meireles, Fortaleza</p>
+          <p class="phone">Reservas e eventos pelo WhatsApp: <a href="https://wa.me/5585987194404" target="_blank" rel="noopener">(85) 98719-4404</a></p>
+          <div class="actions">
+            <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Tasquinha+Real%2C+Rua+Ana+Bilhar%2C+1496%2C+Meireles%2C+Fortaleza+-+CE" target="_blank" rel="noopener">Como chegar</a>
+            <a class="btn btn-line" href="https://www.ifood.com.br/delivery/fortaleza-ce/tasquinha-real-varjota/08acb469-feba-4255-a3c8-31c20e0e1e13" target="_blank" rel="noopener">Delivery</a>
+          </div>
+        </div>
+        <div class="when">
+          <h3>Quando abrimos</h3>
+          <dl><dt>Almoço</dt><dd>Terça a domingo</dd><dt>Jantar</dt><dd>Terça a sábado</dd></dl>
+          <p>Confirme o horário do dia pelo WhatsApp ou no Instagram.</p>
+        </div>
+      </div>
+      <div class="wrap"><div class="map"><iframe title="Mapa com a localização da Tasquinha Real" src="https://www.google.com/maps?q=Tasquinha+Real,+Rua+Ana+Bilhar,+1496,+Meireles,+Fortaleza+-+CE&output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>Tasquinha Real</span><span>Rua Ana Bilhar, 1496, Meireles, Fortaleza</span></div></footer>
+  <script src="site.js"></script>
+</body>
+</html>
